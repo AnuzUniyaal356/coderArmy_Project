@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing Goal Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Goal Tracker</h1>
+        
+        <!-- Goal Input Section -->
+        <div class="goal-input-section">
+            <div class="input-group">
+                <label for="goalInput">Goal</label>
+                <textarea id="goalInput" placeholder="Enter your writing goal"></textarea>
+            </div>
+            <div class="input-group">
+                <label for="purposeInput">Goal Purpose</label>
+                <textarea id="purposeInput" placeholder="Enter the purpose of your goal"></textarea>
+            </div>
+            <button id="addGoalBtn" class="btn-primary">Add Goal</button>
+        </div>
+
+        <!-- Goals List -->
+        <div class="goals-list">
+            <h2>Goals List</h2>
+            <div id="goalsList"></div>
+        </div>
+
+        <!-- Calendar -->
+        <div class="calendar-section">
+            <h2>Calendar</h2>
+            <div class="calendar-header">
+                <button id="prevMonth" class="btn-secondary">&lt;</button>
+                <h3 id="currentMonth">January 2024</h3>
+                <button id="nextMonth" class="btn-secondary">&gt;</button>
+            </div>
+            <div class="calendar-grid">
+                <div class="weekday">Sun</div>
+                <div class="weekday">Mon</div>
+                <div class="weekday">Tue</div>
+                <div class="weekday">Wed</div>
+                <div class="weekday">Thu</div>
+                <div class="weekday">Fri</div>
+                <div class="weekday">Sat</div>
+                
+            </div>
+            <div id="calendarDays"></div>
+        </div>
+
+        <!-- Mind Map -->
+        <div class="mind-map-section">
+            <h2>Mind Map Creator</h2>
+            <div class="mind-map-controls">
+                <button id="addNodeBtn" class="btn-primary">Add Node</button>
+                <button id="connectNodesBtn" class="btn-secondary">Connect Nodes</button>
+            </div>
+            <div id="mindMap" class="mind-map-container"></div>
+        </div>
+    </div>
+
+    <!-- Event Modal -->
+    <div id="eventModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Add Event</h3>
+            <input type="text" id="eventTitle" placeholder="Event Title">
+            <textarea id="eventDescription" placeholder="Event Description"></textarea>
+            <button id="saveEventBtn" class="btn-primary">Save Event</button>
+        </div>
+    </div>
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
